@@ -223,7 +223,11 @@
           </div>
         </div>
         <div class="col">
-
+<todo-item
+      v-for="item in groceryList"
+      v-bind:todo="item"
+      v-bind:key="item.id">
+    </todo-item>
         </div>
       </div>
     </div>
@@ -235,7 +239,12 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Fédération Française de Darts Championnat par équipes'
+      msg: 'Fédération Française de Darts Championnat par équipes',
+      groceryList: [
+        { id: 0, text: 'Vegetables' },
+        { id: 1, text: 'Cheese' },
+        { id: 2, text: 'Whatever else humans are supposed to eat' }
+      ]
     }
   }
 }
