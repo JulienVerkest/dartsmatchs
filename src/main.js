@@ -9,17 +9,17 @@ import router from './router'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  template: '<App/>',
-  components: { App }
-})
-
 Vue.component('todo-item', {
   // The todo-item component now accepts a
   // "prop", which is like a custom attribute.
   // This prop is called todo.
   props: ['todo'],
-  template: '<li>{{ todo.text }}</li>'
+  template: '<li>{{ todo.j1 }} {{ todo.j2 }}</li>'
+})
+
+new Vue({
+  el: '#app',
+  router,
+  template: '<App/>',
+  components: { App }
 })

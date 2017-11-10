@@ -223,11 +223,10 @@
           </div>
         </div>
         <div class="col">
-<todo-item
-      v-for="item in groceryList"
-      v-bind:todo="item"
-      v-bind:key="item.id">
-    </todo-item>
+           <todo-item
+              v-for="item in groceryList"
+              v-bind:todo="item">
+            </todo-item>
         </div>
       </div>
     </div>
@@ -235,15 +234,33 @@
 </template>
 
 <script>
+// import Matchs from './Matchs.vue'
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Fédération Française de Darts Championnat par équipes',
       groceryList: [
-        { id: 0, text: 'Vegetables' },
-        { id: 1, text: 'Cheese' },
-        { id: 2, text: 'Whatever else humans are supposed to eat' }
+        { id: 1, j1: 'A', j2: 'F', start: 'A' },
+        { id: 2, j1: 'B', j2: 'E', start: 'E' },
+        { id: 3, j1: 'C', j2: 'H', start: 'C' },
+        { id: 4, j1: 'D', j2: 'G', start: 'G' },
+        { id: 5, j1: 'A', j2: 'E', start: 'E' },
+        { id: 6, j1: 'B', j2: 'F', start: 'B' },
+        { id: 7, j1: 'C', j2: 'G', start: 'G' },
+        { id: 8, j1: 'D', j2: 'H', start: 'D' },
+        { id: 9, j1: 'A1', j2: 'E1', start: 'A1' },
+        { id: 10, j1: 'A2', j2: 'E2', start: 'A2' },
+        { id: 11, j1: 'A', j2: 'G', start: 'A' },
+        { id: 12, j1: 'C', j2: 'E', start: 'C' },
+        { id: 13, j1: 'B', j2: 'H', start: 'H' },
+        { id: 14, j1: 'D', j2: 'F', start: 'F' },
+        { id: 15, j1: 'A', j2: 'H', start: 'H' },
+        { id: 16, j1: 'D', j2: 'E', start: 'D' },
+        { id: 17, j1: 'B', j2: 'G', start: 'B' },
+        { id: 18, j1: 'C', j2: 'F', start: 'F' },
+        { id: 19, j1: 'A1', j2: 'E2', start: 'E2' },
+        { id: 20, j1: 'A2', j2: 'E1', start: 'E1' }
       ]
     }
   }
