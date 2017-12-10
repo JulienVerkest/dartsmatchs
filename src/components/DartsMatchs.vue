@@ -256,9 +256,12 @@
 </template>
 
 <script>
-// import Matchs from './Matchs.vue'
+import matchs from './Matchs.vue'
 export default {
   name: 'DartsMatchs',
+  components: {
+    matchs
+  },
   data () {
     return {
       ffd: 'Fédération Française de Darts Championnat par équipes',
