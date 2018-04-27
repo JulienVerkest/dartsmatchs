@@ -251,12 +251,20 @@
           </code>
         </div> 
       </div>
+      <div class="row">
+        <div class="col">
+          <code>
+            <textarea rows="100" cols="80">{{ api }}</textarea>
+          </code>
+        </div> 
+      </div>
     </div><!--  container -->
   </div>
 </template>
 
 <script>
 import matchs from './Matchs.vue'
+import axios from 'axios'
 export default {
   name: 'DartsMatchs',
   components: {
@@ -265,6 +273,7 @@ export default {
   data () {
     return {
       ffd: 'Fédération Française de Darts Championnat par équipes',
+      api: '',
       options: {
         division: 1,
         poule: 1,
@@ -365,6 +374,11 @@ export default {
       }
       // }
     }
+  },
+  mounted () {
+    axios
+      .get('http://localhost:3000/players')
+      .then(response => (this.api = response))
   }
 }
 </script>
